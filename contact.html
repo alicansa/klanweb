@@ -1,0 +1,67 @@
+<div class="main-background">
+	<div class="container">
+		<div header active-tab="contact">
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="booking-view">
+			<form name="contactForm">
+			  <div class="row">
+			    <div class="six columns">
+			      <label for="emailInput">Your email <i class="fa fa-asterisk"></i> </label>
+			      <input class="u-full-width" type="email" id="emailInput" 
+			      																	ng-model="contact.email" required>
+			    </div>
+			    <div class="six columns">
+			      <label for="recipientInput">Reason for contacting</label>
+			      <select class="u-full-width" id="recipientInput" ng-model="contact.reasonForContact">
+			        <option value="Questions">Questions</option>
+			        <option value="Booking">Booking</option>
+			      </select>
+			    </div>
+			  </div>
+			  <label for="message">Message <i class="fa fa-asterisk"></i> </label>
+			  <textarea class="u-full-width" id="message" ng-model="contact.message" required></textarea>
+
+			</form>
+
+
+			<div class="row">
+				<div class="offset-by-five six columns">
+					<button ng-click="submitContactForm()" ng-disabled="contactForm.$invalid">
+						Submit Form
+					</button>
+				</div>
+			</div>
+
+
+			<div class="row" style="margin-top:20px;">
+				<div class="offset-by-five seven columns">
+
+					<h5 ng-show="success == 2">
+						Sending <i class="fa fa-cog fa-spin fa-2x"></i>
+					</h5>
+
+					<h5 ng-show="success == 1">
+						Succesfully submitted
+					</h5>
+
+					<h5 ng-show="success == -1">
+						Couldn't submit form. Try again.
+					</h5>
+				</div>
+			</div>
+
+
+			<div style="margin-top:100px;">
+
+				<alicansalor-banner>
+				</alicansalor-banner>
+
+			</div>
+
+
+		</div>
+	</div>
+</div>

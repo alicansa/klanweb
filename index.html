@@ -1,0 +1,60 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<title>Klan Web</title>
+
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="js/lib/angular.js"></script>
+<script src="js/lib/angular-ui-router.js"></script>
+
+
+<link href="css/skeleton.css" rel="stylesheet">
+<link href="css/normalize.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css"  rel="stylesheet">
+
+<!-- Google Maps Javascript API -->
+
+<!-- <script type="text/javascript"
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCK5ZO6iwNISrABJmX4yqG2XMWySII8UbE">
+ </script>
+ <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script> -->
+
+<!-- angularjs modules -->
+<script src="js/modules/index.js"></script>
+<script src="js/modules/intro.js"></script>
+<script src="js/modules/home.js"></script>
+<script src="js/modules/news.js"></script>
+<script src="js/modules/artists.js"></script>
+<script src="js/modules/contact.js"></script>
+<script src="js/modules/booking.js"></script>
+<script src="js/directives/artist.js"></script>
+<script src="js/directives/header.js"></script>
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '392352920960997',
+      xfbml      : true,
+      version    : 'v2.4'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+</head>
+	<body ng-app="klanWebIndexModule">
+		<div class="main-background">
+			<div ui-view ></div>
+		</div>
+	</body>
+</html>

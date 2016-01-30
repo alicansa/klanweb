@@ -1,0 +1,154 @@
+
+
+<div ng-repeat="items in news.newsHighPriority">
+	<div id="high_{{$index}}" class="row news-view" ng-model="showContent" ng-init="showContent=false">
+		<div class="twelve columns">
+			<div ng-class="{'four columns':showContent,'six columns' : !showContent}">
+				<img ng-src="{{items.imgSrc}}" style="max-width:100%;height:auto;">
+			</div>
+
+			<div ng-class="{'eight columns':showContent, 'six columns':!showContent}">
+				<div class="row">
+					<div class="six columns">
+						<h5> {{items.title}} </h5>
+					</div>
+					<div class="three columns">
+							
+
+							<button class="facebook-share" ng-click="facebookShare(items.imgSrc,items.title,items.summary,'high_'+$index)">
+								<i class="fa fa-facebook-square"></i>
+								share
+							</button>
+							
+					</div>
+				</div>
+				
+				<h6> {{items.date}} </h6>
+			
+				<div ng-show="!showContent">
+					{{items.summary}} 
+					<button style="border:none" ng-click="showContent=!showContent">
+				 		<i ng-class="{'fa fa-chevron-circle-down':!showContent , 'fa fa-chevron-circle-up':showContent}"></i>
+					</button>
+				</div>
+				<div ng-show="showContent">
+					<div ng-bind-html="items.content"></div> 
+					<button style="border:none" ng-click="showContent=!showContent">
+				 		<i ng-class="{'fa fa-chevron-circle-down':!showContent , 'fa fa-chevron-circle-up':showContent}"></i>
+					</button>
+				</div>
+			</div>	
+		</div>
+
+	</div>
+</div>
+
+
+
+
+<div ng-repeat="items in news.newsMedPriority">
+	<div id = "med_{{$index}}" class="row" style="margin-bottom:30px;">
+		<div class="twelve columns">
+					<div class="row" >
+						<div  class="six columns">
+							<div  class="news-view" ng-model="showContent_0" ng-init="showContent_0=false"
+													ng-model="showContent_1" ng-init="showContent_1=false">
+								<div class="row" >
+									<div ng-class="{'four columns':!showContent_0,'six columns' : showContent_0}">
+										<img ng-src="{{items[0].imgSrc}}" style="max-width:100%;height:auto;">
+									</div>
+
+									<div  ng-class="{'eight columns':!showContent_0,'six columns' : showContent_0}">
+
+										<div class="row">
+											<div class="five columns">
+												<h5> {{items[0].title}} </h5>
+											</div>
+											<div class="three columns">
+													
+
+													<button class="facebook-share" ng-click="facebookShare(items[0].imgSrc,items[0].title,items[0].summary,'med_'+$index)">
+														<i class="fa fa-facebook-square"></i>
+														share
+													</button>
+													
+											</div>
+										</div>
+
+										<h6> {{items[0].date}} </h6>
+										<p ng-show="!showContent_0">
+											{{items[0].summary}} 
+											<button style="border:none" ng-click="showContent_0=!showContent_0">
+										 		<i ng-class="{'fa fa-chevron-circle-down':!showContent_0 , 'fa fa-chevron-circle-up':showContent_0}"></i>
+											</button>
+										</p>
+									</div>
+
+								</div>
+								<div class="row" ng-show="showContent_0">
+									<div class="twelve columns">
+										<p>
+											{{items[0].content}} 
+											<button style="border:none" ng-click="showContent_0=!showContent_0">
+										 		<i ng-class="{'fa fa-chevron-circle-down':!showContent_0 , 'fa fa-chevron-circle-up':showContent_0}"></i>
+											</button>
+										</p>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+
+						<div  class="six columns">
+
+							<div class="news-view">
+								<div class="row" >
+									<div ng-class="{'four columns':!showContent_1,'six columns' : showContent_1}">
+										<img ng-src="{{items[1].imgSrc}}" style="max-width:100%;height:auto;">
+									</div>
+
+									<div ng-class="{'eight columns':!showContent_1,'six columns' : showContent_1}">
+										<div class="row">
+											<div class="five columns">
+												<h5> {{items[1].title}} </h5>
+											</div>
+											<div class="three columns">
+													
+
+													<button class="facebook-share" ng-click="facebookShare(items[1].imgSrc,items[1].title,items[1].summary,'med_'+$index)">
+														<i class="fa fa-facebook-square"></i>
+														share
+													</button>
+													
+											</div>
+										</div>
+
+										<h6> {{items[1].date}} </h6>
+										<p ng-show="!showContent_1">
+											{{items[1].summary}} 
+											<button style="border:none" ng-click="showContent_1=!showContent_1">
+										 		<i ng-class="{'fa fa-chevron-circle-down':!showContent_1 , 'fa fa-chevron-circle-up':showContent_1}"></i>
+											</button>
+										</p>
+									</div>
+
+								</div>
+								<div class="row" ng-show="showContent_1">
+									<div class="twelve columns">
+										<p>
+											{{items[1].content}} 
+											<button style="border:none" ng-click="showContent_1=!showContent_1">
+										 		<i ng-class="{'fa fa-chevron-circle-down':!showContent_1 , 'fa fa-chevron-circle-up':showContent_1}"></i>
+											</button>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

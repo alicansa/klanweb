@@ -1,0 +1,14 @@
+<div ng-repeat="items in news.dates">
+	<div class="row dates-view">
+		<div class="twelve columns">
+			<h6>{{items.date}}</h6>
+			<p>
+				{{items.content}}
+			</p>
+			<div class="event-link">
+				<p>Check out the Event</p>
+				<a ng-href="{{items.link}}" target="_blank"><i class="fa fa-external-link fa-2x"></i></a>
+			</div>
+		</div>
+	</div>
+</div>

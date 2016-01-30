@@ -1,0 +1,35 @@
+<div class="header">
+		<div class="row">
+			<div class="twelve columns">
+				<img src="http://googledrive.com/host/0B0arfvnSInlofm1aT3NISEhhU28yOEZobXV4MDNtNkw1cmdhZ2Y4VjRGUTRXX2JYSl9pVWM/css/img/closed_logo_trans.png">
+					<div style="float:left">
+						<div class="nav-large">
+							<ul>
+								<li ng-mouseover="showRoster=false"><a id="main" ui-sref="home">MAIN</a> <i class="fa fa-circle"></i> </li> 
+								<li ng-mouseover="showRoster=false"><a id="news" ui-sref="news">NEWS</a> <i class="fa fa-circle"></i> </li> 
+								<li ng-model="showRoster" ng-init="showRoster=false" ng-mouseover="showRoster=true"
+									><a id="roster" ui-sref="roster">ROSTER</a> <i class="fa fa-circle"></i> 
+
+								</li>
+								<li ng-mouseover="showRoster=false"><a id="contact" ui-sref="contact" >CONTACT</a></li> 
+							</ul>
+
+							
+
+						</div>
+
+						<div class="nav-large nav-roster">
+							<ul  ng-show="showRoster" ng-mouseover="showRoster=true"
+									ng-mouseleave="showRoster=false">
+										<li><a id="kaanduzarat" ui-sref="kaanDuzarat">KAAN DUZARAT</a> // </li> 
+										<li><a id="keremakdag" ui-sref="keremAkdag">KEREM AKDAG</a> // </li> 
+										<li><a id="jonnyrock" ui-sref="jonnyRock">JONNY ROCK</a> // </li> 
+										<li><a id="ponza" ui-sref="ponza">PONZA</a> </li> 
+							</ul>
+						</div>
+					</div>
+						
+
+			</div>
+		</div>
+</div>

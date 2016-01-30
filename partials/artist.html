@@ -1,0 +1,37 @@
+<div class="bio-view" ng-style="{'background-image' : 'url({{artistImg}})'}">
+	<div class="container">
+		<div class="main-view" style="padding-top: 180px !important;">
+			<div class="row">
+				<div class="twelve columns">
+					<h1 style="font-weight:bolder;">{{artistName}}</h1>
+				</div>
+			</div>
+
+			<div class="artist-bio">
+				<div class="row">
+					<div class="twelve columns">
+						<p style="color : #8cb0a4;">{{artistBio}}</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row artist-buttons">
+
+					<div class="offset-by-one two columns">
+						<a ui-sref="booking"><button> <i class="fa fa-suitcase"></i> Booking Request </button> </a>
+					</div>
+
+					<div class="offset-by-three two columns">
+						<a ng-href="{{rider}}" target="_blank"><button><i class="fa fa-music"> </i> Rider </button> </a>
+					</div>
+
+					<div class="offset-by-two two columns">
+						<a ng-href="{{moreInfo}}" target="_blank"><button><i class="fa fa-info"></i> More Info  </button></a>
+					</div>
+
+
+			</div>
+
+		</div>
+	</div>
+</div>
